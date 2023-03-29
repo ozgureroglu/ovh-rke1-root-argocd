@@ -13,4 +13,4 @@ spec:
   source:
     path: apps
     repoURL: git@github.com:ozgureroglu/dev-argocd-applications.git
-    targetRevision: stable
+    targetRevision: main
