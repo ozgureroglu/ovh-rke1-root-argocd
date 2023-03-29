@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: xyz-tenant-01
+  name: staging-env
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: qa-tenant-01
+    namespace: staging
     name: in-cluster
   project: default
   source:
