@@ -6,6 +6,9 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
+  syncPolicy:
+    syncOptions:
+    - ApplyOutOfSyncOnly=true
   destination:
     namespace: default
     name: in-cluster
