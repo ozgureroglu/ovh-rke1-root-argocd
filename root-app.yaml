@@ -7,8 +7,9 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   syncPolicy:
-    syncOptions:
-    - ApplyOutOfSyncOnly=true
+    automated:
+      prune: true
+      selfHeal: true
   destination:
     namespace: default
     name: in-cluster
