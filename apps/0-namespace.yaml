@@ -3,6 +3,6 @@ kind: Namespace
 metadata:
   name: qa-asdasdasdtenant-01
   labels:
-    name: qa-tenant-01
+    name: qa-qa-asdasdasdtenant-01-01
   annotations:
     linkerd.io/inject: enabled
