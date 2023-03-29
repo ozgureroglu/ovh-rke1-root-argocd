@@ -1,20 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rke1-cluster-root
+  name: xyz-tenant-01
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
   destination:
-    namespace: default
+    namespace: qa-tenant-01
     name: in-cluster
   project: default
   source:
-    path: envs
-    repoURL: git@github.com:ozgureroglu/dev-argocd-applications.git
+    path: k8s
+    repoURL: git@github.com:ozgureroglu/argocd_test_repo.git
     targetRevision: main
