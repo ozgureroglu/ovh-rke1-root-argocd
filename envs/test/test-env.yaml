@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: staging-env
-  namespace: staging-ns
+  name: test-env
+  namespace: test-ns
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: staging-ns
+    namespace: test-ns
     name: in-cluster
   project: default
   source:
-    path: envs/stag
-    repoURL: git@github.com:ozgureroglu/ovh-rke1-root-argocd.git
+    path: k8s
+    repoURL: git@github.com:ozgureroglu/argocd_test_repo.git
     targetRevision: main

@@ -7,7 +7,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: dev
+    namespace: dev-ns
     name: in-cluster
   project: default
   source:
