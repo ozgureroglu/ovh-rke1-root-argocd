@@ -1,16 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: staging-env
+  name: rke1-cluster-root
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
   destination:
-    namespace: staging
+    namespace: default
     name: in-cluster
   project: default
   source:
-    path: dev
-    repoURL: git@github.com:ozgureroglu/argocd_test_repo.git
+    path: namespaces
+    repoURL: git@github.com:ozgureroglu/dev-argocd-applications.git
     targetRevision: main

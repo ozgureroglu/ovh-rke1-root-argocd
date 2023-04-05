@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prod-ns
+  labels:
+    name: prod-ns
+  annotations:
+    linkerd.io/inject: enabled

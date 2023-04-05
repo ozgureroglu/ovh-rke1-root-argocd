@@ -12,5 +12,5 @@ spec:
   project: default
   source:
     path: k8s
-    repoURL: git@github.com:ozgureroglu/argocd_rke1_dev_env.git
+    repoURL: git@github.com:ozgureroglu/ovh-rke1-root-argocd.git
     targetRevision: main
