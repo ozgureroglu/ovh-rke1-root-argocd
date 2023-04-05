@@ -16,5 +16,5 @@ spec:
   project: default
   source:
     path: envs
-    repoURL: git@github.com:ozgureroglu/dev-argocd-applications.git
+    repoURL: git@github.com:ozgureroglu/ovh-rke1-root-argocd.git
     targetRevision: main
