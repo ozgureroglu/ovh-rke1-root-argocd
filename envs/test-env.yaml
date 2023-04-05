@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: rke1-test-env-root
-  namespace: test-ns
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
