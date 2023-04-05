@@ -11,7 +11,7 @@ spec:
       prune: true
       selfHeal: true
   destination:
-    namespace: default
+    namespace: test-ns
     name: in-cluster
   project: default
   source:
