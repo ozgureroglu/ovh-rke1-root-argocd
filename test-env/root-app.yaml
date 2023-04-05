@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rke1-cluster-test-env
+  name: rke1-cluster-test-applications
   namespace: test-ns
   finalizers:
     - resources-finalizer.argocd.argoproj.io
