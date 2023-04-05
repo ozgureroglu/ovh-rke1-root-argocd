@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: test_repo_app
-  namespace: argocd
+  namespace: test-ns
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: qa-betnation-nl
+    namespace: test-ns
     name: in-cluster
   project: default
   source:
