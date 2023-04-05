@@ -7,10 +7,10 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: test-ns
+    namespace: default
     name: in-cluster
   project: default
   source:
-    path: test-env
+    path: k8s
     repoURL: git@github.com:ozgureroglu/ovh-rke1-root-argocd.git
     targetRevision: main
