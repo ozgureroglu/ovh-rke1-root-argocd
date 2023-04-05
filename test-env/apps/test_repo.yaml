@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-env
-  namespace: test-ns
+  name: test_repo_apps
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: test-ns
+    namespace: qa-betnation-nl
     name: in-cluster
   project: default
   source:
-    path: test-env
-    repoURL: git@github.com:ozgureroglu/ovh-rke1-root-argocd.git
+    path: k8s
+    repoURL: git@github.com:ozgureroglu/argocd_test_repo.git
     targetRevision: main
