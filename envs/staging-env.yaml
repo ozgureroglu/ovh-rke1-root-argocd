@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: staging-env
-  namespace: staging-ns
+  namespace: default
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: staging-ns
+    namespace: default
     name: in-cluster
   project: default
   source:
