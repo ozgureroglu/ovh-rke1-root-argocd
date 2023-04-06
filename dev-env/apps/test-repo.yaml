@@ -1,20 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rke1-cluster-namespaces
+  name: test-repo-app
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
   destination:
     namespace: default
     name: in-cluster
   project: default
   source:
-    path: test-env
-    repoURL: git@github.com:ozgureroglu/ovh-rke1-root-argocd.git
+    path: k8s
+    repoURL: git@github.com:ozgureroglu/argocd_test_repo.git
     targetRevision: main

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rke1-cluster-namespaces
+  name: rke1-cluster-stag-applications
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -15,6 +15,6 @@ spec:
     name: in-cluster
   project: default
   source:
-    path: test-env
+    path: stag-env/apps
     repoURL: git@github.com:ozgureroglu/ovh-rke1-root-argocd.git
     targetRevision: main

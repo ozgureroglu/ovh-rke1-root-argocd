@@ -15,6 +15,6 @@ spec:
     name: in-cluster
   project: default
   source:
-    path: envs/dev
+    path: dev-env
     repoURL: git@github.com:ozgureroglu/ovh-rke1-root-argocd.git
     targetRevision: main
