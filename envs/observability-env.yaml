@@ -15,6 +15,6 @@ spec:
     name: in-cluster
   project: default
   source:
-    path: .
+    path: argodcd_manifests
     repoURL: git@github.com:ozgureroglu/Kubernetes-Observability.git
     targetRevision: main
