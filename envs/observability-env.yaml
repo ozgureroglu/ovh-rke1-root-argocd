@@ -1,16 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-repo-app-test
+  name: rke1-observability-root
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
   destination:
     namespace: default
     name: in-cluster
   project: default
   source:
-    path: k8s
-    repoURL: git@github.com:ozgureroglu/argocd_test_repo.git
-    targetRevision: test
+    path: .
+    repoURL: git@github.com:ozgureroglu/Kubernetes-Observability.git
+    targetRevision: main
