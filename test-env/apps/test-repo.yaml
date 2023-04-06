@@ -13,4 +13,4 @@ spec:
   source:
     path: k8s
     repoURL: git@github.com:ozgureroglu/argocd_test_repo.git
-    targetRevision: main
+    targetRevision: test
